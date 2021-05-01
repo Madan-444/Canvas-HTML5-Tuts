@@ -1,22 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.canvas-container {
+    height: 80vh;
+    width: 100vw;
+    background-color: green;
+}
 #canvas-1 {
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     background: rgb(201, 166, 166);
-    width: 80%;
-    height: 80%;
+    width: 100vw;
+    height: 80vh;
     top: 0;
     left: 0;
 }
 .quotes-container {
-    z-index: 1;
-    position: relative;
-    /* height: 20px;
-    width: 80%; */
-    background-color: orange;
+    background-color: rgb(49, 46, 40);
     color: white;
-    /* animation-name: text;
-    animation-duration: 3s; */
-    /* -o-animation-direction: normal; */
+
+    width: 100vw;
+    min-height: 200px;
+ 
+
+}
+.quotes-container h2 {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.quotes-container > div {
+    width: 50vw;
+    display: flex;
+    padding: 20px;
+    
+}
+.quotes-container img {
+    padding: 30px;
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
 }
 /* 
 @keyframes text {

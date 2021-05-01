@@ -43,6 +43,9 @@ canvas.addEventListener("mousemove", function (event) {
     particleArray.push(new Particle());
   }
 });
+// context.font = "50px serif"
+// context.fillStyle = "#FF0000";
+// context.fillText ("Hello World", 100, 80);
 
 // Lets create som many particles
 class Particle {
@@ -103,12 +106,18 @@ function handleParticle() {
 }
 
 function animate() {
+  ctx.font = "50px serif"
+ctx.fillStyle = "white";
+ctx.fillText ("Hello World", 100, 80);
   // ctx.clearRect(0,0,canvas.width,canvas.height)
   ctx.fillStyle = "black";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   handleParticle();
   hue += 5;
   requestAnimationFrame(animate);
+  ctx.font = "30px serif"
+  ctx.fillStyle = "white";
+  ctx.fillText ("Madan Rijal Magar", 100, 80);
 }
 console.log(particleArray);
 animate();
