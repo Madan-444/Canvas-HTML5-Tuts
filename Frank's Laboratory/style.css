@@ -1,11 +1,29 @@
 #canvas-1 {
+    z-index: -1;
     position: absolute;
-    background: black;
-    width: 100%;
-    height: 100%;
+    background: rgb(201, 166, 166);
+    width: 80%;
+    height: 80%;
     top: 0;
     left: 0;
 }
-h2 {
-    z-index: 100;
+.quotes-container {
+    z-index: 1;
+    position: relative;
+    /* height: 20px;
+    width: 80%; */
+    background-color: orange;
+    color: white;
+    /* animation-name: text;
+    animation-duration: 3s; */
+    /* -o-animation-direction: normal; */
 }
+/* 
+@keyframes text {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 0;
+    }
+} */
