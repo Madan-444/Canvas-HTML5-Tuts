@@ -42,6 +42,17 @@ class Particle {
         ctx.closePath()
         ctx.fill()
     }
+    update() {
+        let dx = mouse.x - this.x
+        let dy = mouse.y - this.y
+        const distance = Math.sqrt(dx*dx + dy*dy)
+        if(distance< 100) {
+            this.size = 15;
+        }
+        else {
+            this.size = 3
+        }
+    }
 }
 
 function init() {
@@ -61,6 +72,7 @@ function animate() {
     ctx.clearRect(0,0,canvas.width,canvas.height)
     for(let i = 0;i< particleArray.length;i++) {
         particleArray[i].draw();
+        particleArray[i].update();
 
     }
     requestAnimationFrame(animate)

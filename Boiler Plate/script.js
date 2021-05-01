@@ -44,6 +44,17 @@ class Particle {
         ctx.arc(this.x,this.y,this.size,0,Math.PI*2)
         ctx.fill()
     }
+    update() {
+        let dx = mouse.x - this.x
+        let dy = mouse.y - this.y
+        const distance = Math.sqrt(dx*dx + dy*dy)
+        if(distance < 200) {
+            this.size = 20
+        }
+        else {
+            this.size = 3
+        }
+    }
 }
 
 // create init function
@@ -66,6 +77,7 @@ function animate() {
 
     for(let i = 0; i<particlesArray.length;i++) {
         particlesArray[i].draw()
+        particlesArray[i].update()
     }
     requestAnimationFrame(animate)
 }
