@@ -14,7 +14,7 @@ myImage.addEventListener('load',function() {
 
 
     let particlesArray = []
-    const numbersOfParticles = 5000;
+    const numbersOfParticles = 2000;
 
     let mappedImage = []
     for(let y = 0; y< canvas.height; y++) {
