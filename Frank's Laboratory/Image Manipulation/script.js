@@ -45,7 +45,7 @@ myImage.addEventListener('load',function() {
             this.x = Math.random()*canvas.width;
             this.y = 0;
             this.speed = 0;
-            this.velocity = Math.random()*0.5;
+            this.velocity = Math.random()*0.2;
             this.size = Math.random()*1.5 + 1
             this.position1 = Math.floor(this.y)
             this.position2 = Math.floor(this.x)
@@ -80,7 +80,7 @@ myImage.addEventListener('load',function() {
     init();
     function animate() {
         // ctx.drawImage(myImage,0,0,canvas.width,canvas.height);
-        ctx.globalAlpha = 0.5;
+        ctx.globalAlpha = 0.2;
         ctx.fillStyle = 'rgba(0,0,0)';
         ctx.fillRect(0,0,canvas.width,canvas.height);
         for(let i = 0;i<particlesArray.length;i++) {
