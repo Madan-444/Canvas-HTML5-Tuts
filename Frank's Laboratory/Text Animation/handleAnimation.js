@@ -117,7 +117,7 @@ function connect() {
             let dx = particleArray[a].x - particleArray[b].x
             let dy = particleArray[a].y - particleArray[b].y
             const distance = Math.sqrt(dx*dx + dy*dy)
-            opacityValue = 1 - distance /50
+            opacityValue = 1 - distance /20
             ctx.strokeStyle = 'rgba(255,255,255,'+ opacityValue +')'
             
             if(distance< 50) {
@@ -132,3 +132,18 @@ function connect() {
         }
     }
 }
+// resize window size
+window.addEventListener('resize',
+function() {
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+    mouse.radius = (canvas.height/80)*(canvas.width/80)
+    init()
+})
+
+//  mouse out event
+window.addEventListener('mouseout',
+function(){
+    mouse.x = undefined;
+    mouse.y = undefined;
+})
